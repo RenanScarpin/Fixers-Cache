@@ -896,3 +896,47 @@ a { color: inherit; }
   .data-screen-page-ref { grid-column: 2; }
   .data-table { min-width: 620px; }
 }
+
+/* Official source links --------------------------------------------------- */
+.source-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: .28rem;
+  color: var(--muted);
+  text-decoration: none;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 120ms ease, text-decoration-color 120ms ease;
+}
+
+.source-link:hover,
+.source-link:focus-visible {
+  color: var(--cream);
+  text-decoration: underline;
+  text-decoration-color: var(--red);
+}
+
+.source-link:focus-visible {
+  outline: 1px solid var(--red);
+  outline-offset: 3px;
+}
+
+.source-link-icon {
+  color: var(--red);
+  font-size: .82em;
+  line-height: 1;
+}
+
+.source-link-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem .75rem;
+  margin: 0;
+  font-size: .83rem;
+}
+
+.source-link-list .source-link:not(:last-child)::after {
+  content: '·';
+  margin-left: .45rem;
+  color: var(--dim);
+}

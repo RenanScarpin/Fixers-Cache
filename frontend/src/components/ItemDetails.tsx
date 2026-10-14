@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
 import { ApiError, getItemDetail } from '../api/client'
 import type { ItemDetail } from '../types/api'
-import { compactSource, titleCase } from '../utils/format'
+import { titleCase } from '../utils/format'
 import { MechanicsView } from './MechanicsView'
 import { PriceBadge } from './PriceBadge'
+import { SourceLink } from './SourceLink'
 
 interface Props {
   itemId: number
@@ -90,14 +91,20 @@ export function ItemDetails({ itemId }: Props) {
         </div>
         <div>
           <h4>Source</h4>
-          <p>
-            {primarySources.length
-              ? primarySources
-                  .map((source) => compactSource(source.code, source.printed_page))
-                  .filter(Boolean)
-                  .join(' · ')
-              : '—'}
-          </p>
+          {primarySources.length ? (
+            <div className="source-link-list">
+              {primarySources.map((source) => (
+                <SourceLink
+                  key={`${source.source_id}-${source.printed_page ?? 'no-page'}`}
+                  code={source.code}
+                  page={source.printed_page}
+                  title={source.title}
+                />
+              ))}
+            </div>
+          ) : (
+            <p>—</p>
+          )}
         </div>
       </div>
     </div>

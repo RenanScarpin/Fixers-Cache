@@ -44,6 +44,7 @@ Internal/package identifier: `fixers-cache`.
 - Manufacturer filter options loaded from `GET /api/manufacturers`.
 
 - A `/data-screen` route providing a searchable, collapsible digital version of the Cyberpunk RED Data Screen reference panels.
+- Item source labels (for example `IR5 p. 116`) link to the corresponding official R. Talsorian Games product, purchase, or download page.
 - Data Screen sections are grouped into Core Rules & Actions, Ranged Combat, Melee & Defense, and Damage & Injuries.
 - `Expand All` / `Collapse All`, responsive reference tables, and locally persisted accordion state.
 - Data Screen lookup is frontend-only and does not require the FastAPI backend.

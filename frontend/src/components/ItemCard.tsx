@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import type { MarketItem, StockSlot } from '../types/api'
-import { compactSource } from '../utils/format'
 import { ItemDetails } from './ItemDetails'
 import { PriceBadge } from './PriceBadge'
+import { SourceLink } from './SourceLink'
 
 interface Props {
   slot: StockSlot
@@ -79,9 +79,11 @@ export function ItemCard({ slot }: Props) {
       )}
 
       <div className="card-footer">
-        <span className="source-line">
-          {compactSource(item.primary_source, item.primary_page) ?? 'Source unavailable'}
-        </span>
+        {item.primary_source ? (
+          <SourceLink code={item.primary_source} page={item.primary_page} className="source-line" />
+        ) : (
+          <span className="source-line">Source unavailable</span>
+        )}
         <button
           className="text-button"
           type="button"
