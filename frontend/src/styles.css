@@ -606,8 +606,6 @@ a { color: inherit; }
     background: white;
   }
 }
-<<<<<<< Updated upstream
-=======
 
 /* Data Screen ------------------------------------------------------------ */
 .data-screen-page { max-width: 1240px; }
@@ -898,4 +896,3 @@ a { color: inherit; }
   .data-screen-page-ref { grid-column: 2; }
   .data-table { min-width: 620px; }
 }
->>>>>>> Stashed changes

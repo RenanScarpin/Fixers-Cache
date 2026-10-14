@@ -1,8 +1,20 @@
-# Cyberpunk RED Night Market Generator
+# Fixer’s Cache
 
-A deterministic Night Market generator backed by the canon-2045 item database.
+*The Night City Toolbox*
 
-## What is implemented
+Fixer’s Cache is a growing collection of GM tools for **Cyberpunk RED**. The project began as a deterministic Night Market generator and now also includes a searchable canon-2045 catalogue and an interactive Data Screen reference.
+
+Internal/project identifier: `fixers-cache`.
+
+## Current tools
+
+- **Night Market** — deterministic Core RAW and canon-2045 expanded generation.
+- **Catalogue** — searchable browser for the canon-2045 item database.
+- **Data Screen** — searchable, collapsible digital reference based on the Cyberpunk RED Data Screen.
+
+## Night Market generator
+
+### What is implemented
 
 ### `core_raw`
 
@@ -45,7 +57,7 @@ If no seed is provided, the generator creates one and prints it.
 Requires Python 3.10+ and uses only the standard library.
 
 ```bash
-cd cyberpunk_night_market_generator
+cd fixers-cache
 python -m nightmarket generate --mode expanded_2045 --seed 12345
 ```
 

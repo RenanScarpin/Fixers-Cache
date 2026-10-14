@@ -29,11 +29,11 @@ export default function App() {
   return (
     <div className="app-frame">
       <header className="site-header">
-        <BrowserLink className="brand" to="/market" aria-label="Night Market home">
-          <span className="brand-mark">NM</span>
+        <BrowserLink className="brand" to="/market" aria-label="Fixer's Cache home">
+          <span className="brand-mark">FC</span>
           <span>
-            <strong>NIGHT MARKET</strong>
-            <small>CANON 2045 CATALOGUE</small>
+            <strong>FIXER'S CACHE</strong>
+            <small>THE NIGHT CITY TOOLBOX</small>
           </span>
         </BrowserLink>
         <nav className="site-nav" aria-label="Primary navigation">
@@ -41,7 +41,7 @@ export default function App() {
             className={pathname === '/market' ? 'nav-link nav-active' : 'nav-link'}
             to="/market"
           >
-            Generator
+            Night Market
           </BrowserLink>
           <BrowserLink
             className={pathname === '/catalogue' ? 'nav-link nav-active' : 'nav-link'}
@@ -61,8 +61,8 @@ export default function App() {
       {page}
 
       <footer className="site-footer">
-        <span>Cyberpunk RED Night Market tooling</span>
-        <span>RAW + canon-2045 expanded generation</span>
+        <span>Fixer's Cache // The Night City Toolbox</span>
+        <span>Night Market • Catalogue • Data Screen</span>
       </footer>
     </div>
   )

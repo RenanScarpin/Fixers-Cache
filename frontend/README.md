@@ -1,10 +1,18 @@
-# Night Market Web GUI
+# Fixer’s Cache Web App
 
-React + TypeScript + Vite frontend for the Cyberpunk RED Night Market generator.
+React + TypeScript + Vite frontend for **Fixer’s Cache: The Night City Toolbox**.
 
-## Current milestone
+The frontend hosts multiple Cyberpunk RED GM tools under a single application. The Night Market generator remains one tool rather than the name of the whole project.
 
-The GUI now includes both the session-ready generator and the first complete Catalogue browser:
+Internal/package identifier: `fixers-cache`.
+
+## Current tools
+
+- **Night Market** — session-ready generator with Core RAW and Expanded 2045 modes.
+- **Catalogue** — browser for the canon-2045 item database.
+- **Data Screen** — searchable, collapsible reference panels.
+
+## Current functionality
 
 - Core RAW vs Expanded 2045 mode selection.
 - Optional deterministic seed.

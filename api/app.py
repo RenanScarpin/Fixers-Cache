@@ -58,11 +58,12 @@ def create_app(db_path: str | Path | None = None) -> FastAPI:
         )
 
     app = FastAPI(
-        title="Cyberpunk RED Night Market API",
+        title="Fixer's Cache API",
         version=API_VERSION,
         description=(
-            "HTTP API for the deterministic canon-2045 Cyberpunk RED "
-            "Night Market generator."
+            "Backend API for Fixer's Cache — The Night City Toolbox. "
+            "Currently provides the deterministic canon-2045 Night Market "
+            "generator and item catalogue endpoints."
         ),
     )
     app.state.db_path = resolved_db
@@ -81,7 +82,7 @@ def create_app(db_path: str | Path | None = None) -> FastAPI:
     @app.get("/", include_in_schema=False)
     def root() -> dict:
         return {
-            "name": "Cyberpunk RED Night Market API",
+            "name": "Fixer's Cache API",
             "api_version": API_VERSION,
             "generator_version": GENERATOR_VERSION,
             "docs": "/docs",

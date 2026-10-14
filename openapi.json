@@ -1,8 +1,8 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Cyberpunk RED Night Market API",
-    "description": "HTTP API for the deterministic canon-2045 Cyberpunk RED Night Market generator.",
+    "title": "Fixer's Cache API",
+    "description": "Backend API for Fixer's Cache — The Night City Toolbox. Currently provides the deterministic canon-2045 Night Market generator and item catalogue endpoints.",
     "version": "0.1.0"
   },
   "paths": {
