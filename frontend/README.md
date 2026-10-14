@@ -35,6 +35,11 @@ The GUI now includes both the session-ready generator and the first complete Cat
 - Responsive 24-item result pages with expandable mechanics/source/relationship details.
 - Manufacturer filter options loaded from `GET /api/manufacturers`.
 
+- A `/data-screen` route providing a searchable, collapsible digital version of the Cyberpunk RED Data Screen reference panels.
+- Data Screen sections are grouped into Core Rules & Actions, Ranged Combat, Melee & Defense, and Damage & Injuries.
+- `Expand All` / `Collapse All`, responsive reference tables, and locally persisted accordion state.
+- Data Screen lookup is frontend-only and does not require the FastAPI backend.
+
 Browser-specific routing, storage, and clipboard code lives under
 `src/platform/browser/` so those concerns can later be replaced with mobile
 navigation/storage implementations for React Native / Expo.

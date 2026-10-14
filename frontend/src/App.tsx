@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { CataloguePage } from './pages/CataloguePage'
 import { GeneratorPage } from './pages/GeneratorPage'
+import { DataScreenPage } from './pages/DataScreenPage'
 import { NotFoundPage } from './pages/NotFoundPage'
 import { BrowserLink, navigate, useBrowserLocation } from './platform/browser/router'
 
@@ -19,6 +20,8 @@ export default function App() {
     page = <GeneratorPage locationSearch={location.search} />
   } else if (pathname === '/catalogue') {
     page = <CataloguePage locationSearch={location.search} />
+  } else if (pathname === '/data-screen') {
+    page = <DataScreenPage />
   } else {
     page = <NotFoundPage />
   }
@@ -45,6 +48,12 @@ export default function App() {
             to="/catalogue"
           >
             Catalogue
+          </BrowserLink>
+          <BrowserLink
+            className={pathname === '/data-screen' ? 'nav-link nav-active' : 'nav-link'}
+            to="/data-screen"
+          >
+            Data Screen
           </BrowserLink>
         </nav>
       </header>
